@@ -1,25 +1,25 @@
 {
-    "name": "template-node-express",
-    "version": "1.0.0",
-    "description": "Template server side with Node.js and Express framework",
+	"name": "test-repassa-api",
+	"version": "1.0.0",
+	"description": "Desafio front-end Repassa",
 	"private": false,
-	"main": "public/index.js",
+	"main": "build/index.js",
 	"author": "Ivan Espinola Gomes <ivan.espinola@live.com>",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/i-espinola/template-node-express.git"
+		"url": "git+https://github.com/i-espinola/test-repassa-api.git"
 	},
 	"bugs": {
-		"url": "https://github.com/i-espinola/template-node-express/issues"
+		"url": "https://github.com/i-espinola/test-repassa-api/issues"
 	},
-	"readme": "https://github.com/i-espinola/template-node-express#readme",
+	"readme": "https://github.com/i-espinola/test-repassa-api#readme",
 	"license": "MIT",
 	"scripts": {
-		"clean": "del public npm-debug.log package-lock.json",
-		"build": "npm run clean && copyfiles -f src/*.ico public && babel ./src -d ./public/ --source-maps",
-		"watch": "npm run build &&  babel ./src -d ./public/ --source-maps --watch",
-		"dev": "npm run build &&  babel ./src -d ./public/ --source-maps --watch | nodemon --watch public",
-		"start": "npm run build && node public/index"
+		"clean": "del build npm-debug.log package-lock.json",
+		"build": "npm run clean && copyfiles -f src/*.ico build && babel ./src -d ./build/ --source-maps",
+		"watch": "npm run build &&  babel ./src -d ./build/ --source-maps --watch",
+		"dev": "npm run build &&  babel ./src -d ./build/ --source-maps --watch | nodemon --watch build",
+		"start": "npm run build && pm2 start build/index.js --name repassa-api"
 	},
 	"dependencies": {
 		"babel": "*",
@@ -32,6 +32,12 @@
 		"copyfiles": "*",
 		"del-cli": "*",
 		"express": "*",
+		"express-query-int": "*",
+		"lodash": "*",
+		"mongoose": "*",
+		"mongoose-paginate": "*",
+		"node-restful": "*",
+		"pm2": "*",
 		"serve-favicon": "*"
 	},
 	"devDependencies": {
