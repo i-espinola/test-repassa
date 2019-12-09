@@ -1,5 +1,21 @@
 # Test Repassa API
 
+## mlab
+
+Raw User Configuration
+{
+    "_id": "heroku_k66nk669.repassa-api",
+    "password": "J#eBYx5WUkYmG8Y",
+    "user": "repassa-api",
+    "db": "heroku_k66nk669",
+    "roles": [
+        {
+            "role": "dbOwner",
+            "db": "heroku_k66nk669"
+        }
+    ]
+}
+
 Api server side
 
 ## Bonus 2
