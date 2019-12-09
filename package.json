@@ -17,8 +17,8 @@
 	"scripts": {
 		"clean": "del build npm-debug.log package-lock.json",
 		"build": "npm run clean && copyfiles -f src/*.ico build && babel ./src -d ./build/ --source-maps",
-		"watch": "npm run build &&  babel ./src -d ./build/ --source-maps --watch",
-		"dev": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --inspect --watch build",
+		"dev": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --watch build",
+		"debugger": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --inspect --watch build",
 		"start": "npm run build && pm2 start build/index.js --name repassa-api"
 	},
 	"dependencies": {

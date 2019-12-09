@@ -1,4 +1,4 @@
-const Product = require('../models/employee.model')
+import Product from '../models/employee.model'
 
 // Simple version, without validation or sanitation
 exports.test = function (req, res) {
