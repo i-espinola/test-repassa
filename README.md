@@ -101,7 +101,7 @@ Esta requisição returna um objeto com todos os usuários persistidos na base.
 
 ## Principais tecnologias integradas
 
-- [x] JavaScript / **ES6**.
+- [x] JavaScript - **ES6**.
 - [x] MongoDB.
 - [x] Nodejs.
 - [x] ESlint.
