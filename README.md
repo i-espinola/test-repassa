@@ -66,13 +66,14 @@ Esta requisição returna o objeto criado.
 
 ### Atualizar funcionário - PUT
 
-Para atualizar um funcionário, basta enviar uma requisição com o método `PUT` passando os parametros *name*, *login*, *feedback*, e informar o ID do funcionário logo após a URL base da API. Desta forma a requisição deve ser assim:
+Para atualizar um funcionário, basta enviar uma requisição com o método `PUT` passando os parametros *name*, *login*, *feedback*, e informar o ID do funcionário logo após a URL base da API.
+Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d?name=kiko&login=tesouro&feedback=Criança mimada, e não muito inteligente.
 
 Esta requisição returna o objeto atualizado.
 
-### Deletar funcionário - GET
+### Deletar funcionário - DELETE
 
 Para deletar um funcionário, basta enviar uma requisição com o método `DELETE` com o respectivo ID do funcionário logo após a URL base da API.
 Desta forma a requisição deve ser assim:
@@ -97,7 +98,7 @@ Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/list
 
-Esta requisição returna um objeto com todos os usuários persistidos na base.
+Esta requisição returna um objeto com todos os objetos dos usuários persistidos na base.
 
 ## Principais tecnologias integradas
 
