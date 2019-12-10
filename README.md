@@ -34,19 +34,20 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
 Depois de executar o comando acima, a aplicação estará pronta para receber as requisições a partir dos endpoints da API.
 A aplicação sera recompilada sempre que você salvar um arquivo, você também verá quaisquer eventuais erros no código no seu console.
 
+### Construção (Transpilar)
+
+Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e compilados para a versão ES5 do JS.
+Para construir a aplicação em modo producão, execute o seguinte comando:
+
+    npm run build
+
+**Nota**: Se você quiser publicar o projeto com o comando `npm run start`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
+
 ### Modo produção
 
 Com esse comando será inicializado um servidor **_Express_** que executa os arquivos de **produção** no diretório `./build`, que por padrão, busca o arquivo `index.js`.
 
     npm run start
-
-### Construção (Transpilar)
-
-Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e minificados para obter uma melhor performance e otimização de trafego de dados ao acessar a aplicação. Para construir a aplicação em modo producão, execute o seguinte comando.
-
-    npm run build
-
-**Nota**: Se você possui um servidor local capaz de executar aplicações web, e quiser publicar o projeto com o comando `npm run build`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
 
 ## Uso da API
 
