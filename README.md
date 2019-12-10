@@ -109,3 +109,4 @@ Esta requisição returna um objeto com todos os usuários persistidos na base.
 - [x] Nodemon.
 - [x] Babel.
 - [x] NPM.
+- [x] Git.
