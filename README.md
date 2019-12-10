@@ -21,8 +21,8 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
 
     npm run dev
 
-Depois de executar o comando acima, abra [http://localhost:3030](http://localhost:3030) para renderizar a aplicação no seu browser preferido.
-A página será recarregada sempre que fizer edições no seu código fonte, você também verá quaisquer eventuais erros no código no seu console e no próprio browser.
+Depois de executar o comando acima, a aplicação estará pronta para receber as requisições em [http://localhost:3030/api](http://localhost:3030/api).
+A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
 
 ### Modo produção
 
