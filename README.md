@@ -22,7 +22,7 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
     npm run dev
 
 Depois de executar o comando acima, a aplicação estará pronta para receber as requisições a partir dos endpoints da API.
-A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
+A aplicação sera recompilada sempre que você salvar um arquivo, você também verá quaisquer eventuais erros no código no seu console.
 
 ### Modo debugger
 
@@ -32,7 +32,7 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
     npm run debugger
 
 Depois de executar o comando acima, a aplicação estará pronta para receber as requisições a partir dos endpoints da API.
-A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
+A aplicação sera recompilada sempre que você salvar um arquivo, você também verá quaisquer eventuais erros no código no seu console.
 
 ### Modo produção
 
