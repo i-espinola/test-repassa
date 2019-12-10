@@ -46,7 +46,7 @@ Esta API faz operações CRUD a partir de requisições recebidas via protocolo 
 
 ### Criar um novo funcionário - POST
 
-Para criar um novo funcionário basta enviar uma requisição com o método `POST` com os parametros *name*, *login*, *feedback* com o sufixo `/create` logo após o endpoint da API.
+Para criar um novo funcionário basta enviar uma requisição com o método `POST` com os parametros *name*, *login*, *feedback* com o prefixo `/create` logo após o endpoint da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/create?name=kiko&login=kikinho&feedback=Criança mimada, e não muito inteligente.
@@ -74,7 +74,7 @@ Desta forma a requisição deve ser assim:
 
 ### Listar todos funcionários - GET
 
-Para listar todos funcionário basta enviar uma requisição com o método `GET` com o sufixo `/list` logo após o endpoint da API.
+Para listar todos funcionário basta enviar uma requisição com o método `GET` com o prefixo `/list` logo após o endpoint da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/list
