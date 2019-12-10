@@ -101,12 +101,12 @@ Esta requisição returna um objeto com todos os usuários persistidos na base.
 
 ## Principais tecnologias integradas
 
+- [x] Babel.
+- [x] ESlint.
+- [x] Express.
+- [x] Git.
 - [x] JavaScript - **ES6**.
 - [x] MongoDB.
 - [x] Nodejs.
-- [x] ESlint.
-- [x] Express.
 - [x] Nodemon.
-- [x] Babel.
 - [x] NPM.
-- [x] Git.
