@@ -36,13 +36,13 @@ A aplicação sera recompilada sempre que você salvar um documento, você tamb�
 
 ### Modo produção
 
-Com esse comando será inicializado um servidor **_Express_** e executara os arquivos de **produção** no diretório `./public`, que por padrão, busca o arquivo `index.js`.
+Com esse comando será inicializado um servidor **_Express_** e executara os arquivos de **produção** no diretório `./build`, que por padrão, busca o arquivo `index.js`.
 
     npm run start
 
 ### Construção (Transpilar)
 
-Este comando cria os arquivos de produção dentro do diretório `./public`. Os arquivos de produção são transpilados e minificados para obter uma melhor performance e otimização de trafego de dados ao acessar a aplicação. Para construir a aplicação em modo producão, execute o seguinte comando
+Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e minificados para obter uma melhor performance e otimização de trafego de dados ao acessar a aplicação. Para construir a aplicação em modo producão, execute o seguinte comando
 
     npm run build
 

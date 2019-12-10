@@ -13,6 +13,7 @@
 		"url": "https://github.com/i-espinola/test-repassa-api/issues"
 	},
 	"readme": "https://github.com/i-espinola/test-repassa-api#readme",
+	"homepage": ".",
 	"license": "MIT",
 	"scripts": {
 		"clean": "del build npm-debug.log package-lock.json",
