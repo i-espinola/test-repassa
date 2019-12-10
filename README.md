@@ -6,7 +6,7 @@
 
 ### Instalação local
 
-Para fazer a instalação de todas as dependencias da aplicação em modo de desenvolvimento, execute a seguinte linha de comando no terminal
+Para fazer a instalação de todas as dependencias da aplicação, execute a seguinte linha de comando no terminal
 
     npm install
 
@@ -21,7 +21,7 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
 
     npm run dev
 
-Depois de executar o comando acima, a aplicação estará pronta para receber as requisições em [http://localhost:3030/api](http://localhost:3030/api).
+Depois de executar o comando acima, a aplicação estará pronta para receber as requisições a partir dos endpoints da API.
 A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
 
 ### Modo debugger
@@ -31,7 +31,7 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
 
     npm run debugger
 
-Depois de executar o comando acima, a aplicação estará pronta para receber as requisições em [http://localhost:3030/api](http://localhost:3030/api).
+Depois de executar o comando acima, a aplicação estará pronta para receber as requisições a partir dos endpoints da API.
 A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
 
 ### Modo produção
