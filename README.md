@@ -57,43 +57,42 @@ Esta API faz operações CRUD a partir de requisições recebidas via protocolo 
 
 ### Criar novo funcionário - POST
 
-Para criar um novo funcionário basta enviar uma requisição com o método `POST` com os parametros *name*, *login*, *feedback* com o prefixo `/create` logo após a URL da API.
+Para criar um novo funcionário, basta enviar uma requisição com o método `POST` passando os parametros *name*, *login*, *feedback* e o prefixo `/create` logo após a URL base da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/create?name=kiko&login=kikinho&feedback=Criança mimada, e não muito inteligente.
 
-Esta requisição returna o objeto criado do usuário.
+Esta requisição returna o objeto criado.
 
 ### Atualizar funcionário - PUT
 
-Para atualizar um funcionário basta enviar uma requisição com o método `PUT` com os parametros *name*, *login*, *feedback*, e informar o ID do funcionário logo após a URL da API.
-Desta forma a requisição deve ser assim:
+Para atualizar um funcionário, basta enviar uma requisição com o método `PUT` passando os parametros *name*, *login*, *feedback*, e informar o ID do funcionário logo após a URL base da API. Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d?name=kiko&login=tesouro&feedback=Criança mimada, e não muito inteligente.
 
-Esta requisição returna o objeto atualizado do usuário em questão.
+Esta requisição returna o objeto atualizado.
 
 ### Deletar funcionário - GET
 
-Para deletar um funcionário basta enviar uma requisição com o método `DELETE` com o respectivo ID do funcionário logo após a URL da API.
+Para deletar um funcionário, basta enviar uma requisição com o método `DELETE` com o respectivo ID do funcionário logo após a URL base da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d
 
-Esta requisição returna o objeto deletado do usuário.
+Esta requisição returna o objeto deletado.
 
 ### Buscar funcionário - GET
 
-Para buscar um funcionário basta enviar uma requisição com o método `GET` com o respectivo ID do funcionário logo após a URL da API.
+Para buscar um funcionário, basta enviar uma requisição com o método `GET` com o respectivo ID do funcionário logo após a URL base da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d
 
-Esta requisição returna o objeto do usuário solicitado.
+Esta requisição returna o objeto do usuário identificado pelo seu _ID.
 
 ### Listar todos funcionários - GET
 
-Para listar todos funcionário basta enviar uma requisição com o método `GET` com o sufixo `/list` logo após a URL da API.
+Para listar todos funcionários, basta enviar uma requisição com o método `GET` com o sufixo `/list` logo após a URL base da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/list
