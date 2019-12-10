@@ -51,12 +51,16 @@ Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/create?name=kiko&login=kikinho&feedback=Criança mimada, e não muito inteligente.
 
+Esta requisição returna o objeto criado do usuário.
+
 ### Atualizar um funcionário - PUT
 
 Para atualizar um funcionário basta enviar uma requisição com o método `PUT` com os parametros *name*, *login*, *feedback*, e informar o ID do funcionário logo após a URL da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d?name=kiko&login=tesouro&feedback=Criança mimada, e não muito inteligente.
+
+Esta requisição returna o objeto atualizado do usuário em questão.
 
 ### Deletar um funcionário - GET
 
@@ -65,6 +69,8 @@ Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d
 
+Esta requisição returna o objeto deletado do usuário.
+
 ### Buscar um funcionário - GET
 
 Para buscar um funcionário basta enviar uma requisição com o método `GET` com o respectivo ID do funcionário logo após a URL da API.
@@ -72,12 +78,16 @@ Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/5def8be15ee04b004c0ab78d
 
+Esta requisição returna o objeto do usuário solicitado.
+
 ### Listar todos funcionários - GET
 
 Para listar todos funcionário basta enviar uma requisição com o método `GET` com o prefixo `/list` logo após a URL da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/list
+
+Esta requisição returna um objeto com todos os usuários persistidos na base.
 
 ## Principais tecnologias integradas
 
