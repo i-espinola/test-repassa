@@ -51,7 +51,7 @@ Com esse comando será inicializado um servidor **_Express_** que executa os arq
 
 ## Uso da API
 
-Esta API faz operações CRUD a partir de requisições recebidas via protocolo HTTP. A URL da API em questão é:
+Esta API faz operações CRUD a partir de requisições recebidas via protocolo HTTP. A URL base da API em questão é:
 
     https://repassa-api.herokuapp.com/api
 
