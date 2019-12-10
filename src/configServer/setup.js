@@ -2,7 +2,7 @@
 const setup = {
   path: 'build/',
   port: process.env.PORT || 3030,
-  prefixe: '/api/',
+  prefixe: '/api',
   headers: {
     accept: 'application/json',
     'Access-Control-Allow-Origin': '*',
@@ -18,13 +18,21 @@ const setup = {
       useUnifiedTopology: true
     }
   },
-  error: {
-    status: 400,
-    message: 'bad request'
+  status200: {
+    code: 200,
+    message: 'Ok'
   },
-  sucess: {
-    status: 200,
-    message: 'ok'
+  status400: {
+    code: 400,
+    message: 'Bad Request'
+  },
+  status404: {
+    code: 404,
+    message: 'Not Found'
+  },
+  status500: {
+    code: 500,
+    message: 'Internal Server Error'
   }
 }
 

@@ -1,60 +1,41 @@
-import Product from '../models/employee.model'
+import Model from '../models/employee.model'
+import setup from '../../configServer/setup'
 
-// Simple version, without validation or sanitation
-exports.test = function (req, res) {
-  res.send('Greetings from the Test controller!')
+const callBack = (data, res) => {
+  try {
+    if (!data) res.status(setup.status404.code).send(setup.status404).set(setup.headers).end()
+    res.status(setup.status200.code).set(setup.headers).send(data).end()
+  } catch (err) {
+    res.status(setup.status500.code).set(setup.headers).send(err).end()
+  }
 }
 
-exports.product_create = function (req, res) {
-  const product = new Product(
-    {
-      name: req.query.name,
-      login: req.query.login,
-      feedback: req.query.feedback
-    }
-  )
+export const errorBadRequest = (req, res) => { res.status(setup.status400.code).set(setup.headers).send(setup.status400).end() }
 
-  product.save(function (err) {
-    if (err) {
-      return next(err)
-    }
-    res.send('Product Created successfully')
-  })
+export const userCreate = async (req, res) => {
+  const user = new Model(req.query)
+  const data = await user.save()
+
+  callBack(data, res)
 }
 
-exports.product_details = function (req, res) {
-  Product.findById(req.params.id, function (err, product) {
-    if (err) { return next(err) }
-    res.send(product)
-  })
+export const userList = async (req, res) => {
+  const data = await Model.find({})
+  callBack(data, res)
 }
 
-exports.product_list = function (req, res) {
-  const list = Product.find({})
-  try { res.send(list) } catch (err) { res.status(500).send(err) }
-  //   Product.find(function (err, product) {
-  //     if (err) return next(err)
-  //     res.send(product)
-  //   })
-  //   const foods = Product.find({})
-
-//   try {
-//     res.send(foods)
-//   } catch (err) {
-//     res.status(500).send(err)
-//   }
+export const userDetails = async (req, res) => {
+  const data = await Model.findById(req.params.id)
+  callBack(data, res)
 }
 
-exports.product_update = function (req, res) {
-  Product.findByIdAndUpdate(req.params.id, { $set: req.body }, function (err, product) {
-    if (err) return next(err)
-    res.send('Product udpated.')
-  })
+export const userUpdate = async (req, res) => {
+  await Model.findByIdAndUpdate(req.params.id, req.query, { useFindAndModify: false })
+  const data = await Model.findById(req.params.id)
+  callBack(data, res)
 }
 
-exports.product_delete = function (req, res) {
-  Product.findByIdAndRemove(req.params.id, function (err) {
-    if (err) return next(err)
-    res.send('Deleted successfully!')
-  })
+export const userDelete = async (req, res) => {
+  const data = await Model.findByIdAndDelete(req.params.id)
+  callBack(data, res)
 }
