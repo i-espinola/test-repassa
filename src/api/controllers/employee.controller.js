@@ -1,5 +1,5 @@
 import Model from '../models/employee.model'
-import setup from '../../configServer/setup'
+import setup from '../../confServer/setup'
 
 const callBack = (data, res) => {
   try {
@@ -30,7 +30,7 @@ export const userDetails = async (req, res) => {
 }
 
 export const userUpdate = async (req, res) => {
-  await Model.findByIdAndUpdate(req.params.id, req.query, { useFindAndModify: false })
+  await Model.findByIdAndUpdate(req.params.id, req.query)
   const data = await Model.findById(req.params.id)
   callBack(data, res)
 }

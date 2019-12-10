@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -6,4 +6,4 @@ const userSchema = new mongoose.Schema({
   feedback: { type: String, requerid: false }
 })
 
-export default mongoose.model('Users', userSchema)
+export default mongoose.model('users', userSchema)
