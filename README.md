@@ -54,7 +54,7 @@ Esta API faz operações CRUD a partir de requisições recebidas via protocolo 
 
     https://repassa-api.herokuapp.com/api
 
-### Criar um novo funcionário - POST
+### Criar novo funcionário - POST
 
 Para criar um novo funcionário basta enviar uma requisição com o método `POST` com os parametros *name*, *login*, *feedback* com o prefixo `/create` logo após a URL da API.
 Desta forma a requisição deve ser assim:
@@ -63,7 +63,7 @@ Desta forma a requisição deve ser assim:
 
 Esta requisição returna o objeto criado do usuário.
 
-### Atualizar um funcionário - PUT
+### Atualizar funcionário - PUT
 
 Para atualizar um funcionário basta enviar uma requisição com o método `PUT` com os parametros *name*, *login*, *feedback*, e informar o ID do funcionário logo após a URL da API.
 Desta forma a requisição deve ser assim:
@@ -72,7 +72,7 @@ Desta forma a requisição deve ser assim:
 
 Esta requisição returna o objeto atualizado do usuário em questão.
 
-### Deletar um funcionário - GET
+### Deletar funcionário - GET
 
 Para deletar um funcionário basta enviar uma requisição com o método `DELETE` com o respectivo ID do funcionário logo após a URL da API.
 Desta forma a requisição deve ser assim:
@@ -81,7 +81,7 @@ Desta forma a requisição deve ser assim:
 
 Esta requisição returna o objeto deletado do usuário.
 
-### Buscar um funcionário - GET
+### Buscar funcionário - GET
 
 Para buscar um funcionário basta enviar uma requisição com o método `GET` com o respectivo ID do funcionário logo após a URL da API.
 Desta forma a requisição deve ser assim:
