@@ -41,13 +41,13 @@ Para construir a aplicação em modo producão, execute o seguinte comando:
 
     npm run build
 
-**Nota**: Se você quiser publicar o projeto com o comando `npm run start`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
-
 ### Modo produção
 
 Com esse comando será inicializado um servidor **_Express_** que executa os arquivos de **produção** no diretório `./build`, que por padrão, busca o arquivo `index.js`.
 
     npm run start
+
+**Nota**: Se você quiser publicar o projeto com o comando `npm run start`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
 
 ## Uso da API
 
