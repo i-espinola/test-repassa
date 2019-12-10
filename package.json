@@ -13,14 +13,13 @@
 		"url": "https://github.com/i-espinola/test-repassa-api/issues"
 	},
 	"readme": "https://github.com/i-espinola/test-repassa-api#readme",
-	"homepage": ".",
 	"license": "MIT",
 	"scripts": {
 		"clean": "del build npm-debug.log package-lock.json",
 		"build": "npm run clean && copyfiles -f src/*.ico build && babel ./src -d ./build/ --source-maps",
 		"dev": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --watch build",
 		"debugger": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --inspect --watch build",
-		"start": "npm run build && pm2 start build/index.js --name repassa-api"
+		"start": "npm run build && node build/index"
 	},
 	"dependencies": {
 		"babel": "^6.23.0",
