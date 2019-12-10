@@ -6,18 +6,18 @@
 
 ### Instalação local
 
-Para fazer a instalação de todas as dependencias da aplicação, execute a seguinte linha de comando no terminal
+Para fazer a instalação de todas as dependencias da aplicação, execute a seguinte linha de comando no terminal.
 
     npm install
 
-**Nota**: Se após a intalação você receber informações de vulnerabilidades nas dependencias instaladas, execute o seguinte comando para corrigir eventuais vulnerabilidades
+**Nota**: Se após a intalação você receber informações de vulnerabilidades nas dependencias instaladas, execute o seguinte comando para corrigir eventuais vulnerabilidades.
 
     npm audit fix && npm audit fix --force
 
 ### Modo desenvolvimento
 
 Os arquivos do código fonte da aplicação estão contidos dentro do diretório `./src`.
-Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal
+Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal.
 
     npm run dev
 
@@ -27,7 +27,7 @@ A aplicação sera recompilada sempre que você salvar um arquivo, você também
 ### Modo debugger
 
 Os arquivos do código fonte da aplicação estão contidos dentro do diretório `./src`.
-Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal
+Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento para degubar a aplicação.
 
     npm run debugger
 
@@ -42,11 +42,11 @@ Com esse comando será inicializado um servidor **_Express_** e executara os arq
 
 ### Construção (Transpilar)
 
-Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e minificados para obter uma melhor performance e otimização de trafego de dados ao acessar a aplicação. Para construir a aplicação em modo producão, execute o seguinte comando
+Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e minificados para obter uma melhor performance e otimização de trafego de dados ao acessar a aplicação. Para construir a aplicação em modo producão, execute o seguinte comando.
 
     npm run build
 
-**Nota**: Se você possui um servidor local capaz de executar aplicações web, e quiser publicar o projeto com o comando `npm run build`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`
+**Nota**: Se você possui um servidor local capaz de executar aplicações web, e quiser publicar o projeto com o comando `npm run build`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
 
 ## Uso da API
 
