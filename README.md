@@ -36,7 +36,7 @@ A aplicação sera recompilada sempre que você salvar um arquivo, você também
 
 ### Modo produção
 
-Com esse comando será inicializado um servidor **_Express_** que executara os arquivos de **produção** no diretório `./build`, que por padrão, busca o arquivo `index.js`.
+Com esse comando será inicializado um servidor **_Express_** que executa os arquivos de **produção** no diretório `./build`, que por padrão, busca o arquivo `index.js`.
 
     npm run start
 
