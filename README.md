@@ -47,7 +47,7 @@ Com esse comando será inicializado um servidor **_Express_** que executa os arq
 
     npm run start
 
-**Nota**: Se você quiser publicar o projeto com o comando `npm run start`, não se esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
+**Nota**: Se você quiser publicar o projeto com o comando `npm run start`, não esqueça de ajustar o caminho relativo no arquivo `./package.json` na propriedade `homepage:`.
 
 ## Uso da API
 
