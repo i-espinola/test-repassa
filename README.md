@@ -24,6 +24,16 @@ Após concluir a instalação de todas as dependencias da aplicação, é possí
 Depois de executar o comando acima, a aplicação estará pronta para receber as requisições em [http://localhost:3030/api](http://localhost:3030/api).
 A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
 
+### Modo debugger
+
+Os arquivos do código fonte da aplicação estão contidos dentro do diretório `./src`.
+Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento no terminal
+
+    npm run debugger
+
+Depois de executar o comando acima, a aplicação estará pronta para receber as requisições em [http://localhost:3030/api](http://localhost:3030/api).
+A aplicação sera recompilada sempre que você salvar um documento, você também verá quaisquer eventuais erros no código no seu console.
+
 ### Modo produção
 
 Com esse comando será inicializado um servidor **_Express_** e executara os arquivos de **produção** no diretório `./public`, que por padrão, busca o arquivo `index.js`.
