@@ -92,7 +92,7 @@ Esta requisição returna o objeto do usuário solicitado.
 
 ### Listar todos funcionários - GET
 
-Para listar todos funcionário basta enviar uma requisição com o método `GET` com o prefixo `/list` logo após a URL da API.
+Para listar todos funcionário basta enviar uma requisição com o método `GET` com o sufixo `/list` logo após a URL da API.
 Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/list
