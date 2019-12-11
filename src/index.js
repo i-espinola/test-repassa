@@ -1,4 +1,5 @@
 // IMPORTS
+// eslint-disable-next-line no-unused-vars
 import database from './confServer/database'
 import routes from './confServer/routes'
 import setup from './confServer/setup'
