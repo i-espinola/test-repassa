@@ -1,8 +1,8 @@
 // IMPORTS
 // eslint-disable-next-line no-unused-vars
-import database from './confServer/database'
-import routes from './confServer/routes'
-import setup from './confServer/setup'
+import dataBase from './setup/mongodb'
+import routes from './setup/routes'
+import setup from './setup'
 import bodyParser from 'body-parser'
 import express from 'express'
 import http from 'http'

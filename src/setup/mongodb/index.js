@@ -1,5 +1,5 @@
 // Set up mongoose connection
-import setup from './setup'
+import setup from '..'
 import { connect, connection } from 'mongoose'
 
 connect(setup.mongodb.uri, setup.mongodb.options)

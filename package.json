@@ -17,10 +17,11 @@
 	"license": "MIT",
 	"scripts": {
 		"clean": "del build npm-debug.log package-lock.json",
+		"env": "node -r dotenv/config",
 		"build": "npm run clean && babel ./src -d ./build/ --source-maps",
-		"dev": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --watch build",
-		"debugger": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon --inspect --watch build",
-		"start": "npm run build && node build/index"
+		"dev": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon -r dotenv/config --watch build",
+		"debugger": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon -r dotenv/config --inspect --watch build",
+		"start": "npm run build && node -r dotenv/config build/index dotenv_config_path=src/setup/env/env/vars/.env"
 	},
 	"dependencies": {
 		"babel": "^6.23.0",
@@ -32,6 +33,7 @@
 		"babel-runtime": "^6.26.0",
 		"body-parser": "^1.19.0",
 		"del-cli": "^3.0.0",
+		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
 		"mongodb": "^3.4.0",
 		"mongoose": "^5.7.14"

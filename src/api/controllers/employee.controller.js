@@ -1,5 +1,5 @@
 import Model from '../models/employee.model'
-import setup from '../../confServer/setup'
+import setup from '../../setup'
 
 export const status200 = (data, res) => {
   res.status(setup.status200.code).set(setup.headers).send(data).end()

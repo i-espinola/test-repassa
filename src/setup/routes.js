@@ -1,6 +1,6 @@
 import express from 'express'
-import setup from './setup'
-import { userCreate, userUpdate, userDetails, userFind, userList, userDelete, status200, status400 } from '../api/controllers/employee.controller'
+import setup from '.'
+import { userCreate, userUpdate, userDetails, userFind, userList, userDelete, status400 } from '../api/controllers/employee.controller'
 
 const router = express.Router()
 
