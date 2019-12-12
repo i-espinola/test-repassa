@@ -29,6 +29,17 @@ export const userDetails = async (req, res) => {
   callBack(data, res)
 }
 
+export const userFind = async (req, res) => {
+  const search = await Model.findOne({ login: req.params.login })
+  const data = {
+    name: search.name,
+    login: search.login,
+    feedback: search.feedback,
+    _id: search.id
+  }
+  callBack(data, res)
+}
+
 export const userUpdate = async (req, res) => {
   await Model.findByIdAndUpdate(req.params.id, req.query)
   const data = await Model.findById(req.params.id)
