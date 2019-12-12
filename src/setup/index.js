@@ -9,7 +9,7 @@ const setup = {
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
   },
-  banner: '\nExpress server on\n',
+  banner: '\nExpress server on',
   favicon: 'build/favicon.ico',
   mongodb: {
     // uri: 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST + '/' + process.env.DB_BASE,
