@@ -1,52 +1,67 @@
 import Model from '../models/employee.model'
 import setup from '../../confServer/setup'
 
-const callBack = (data, res) => {
-  try {
-    if (!data) res.status(setup.status404.code).send(setup.status404).set(setup.headers).end()
-    res.status(setup.status200.code).set(setup.headers).send(data).end()
-  } catch (err) {
-    res.status(setup.status500.code).set(setup.headers).send(err).end()
-  }
+export const status200 = (data, res) => {
+  res.status(setup.status200.code).set(setup.headers).send(data || setup.status200.message).end()
 }
-
-export const errorBadRequest = (req, res) => { res.status(setup.status400.code).set(setup.headers).send(setup.status400).end() }
+export const status400 = (res) => {
+  res.status(setup.status400.code).set(setup.headers).send(setup.status400).end()
+}
+export const status404 = (res) => {
+  res.status(setup.status404.code).set(setup.headers).send(setup.status404).end()
+}
+export const status500 = (err, res) => {
+  res.status(setup.status500.code).set(setup.headers).send(err).end()
+}
 
 export const userCreate = async (req, res) => {
   const user = new Model(req.query)
-  const data = await user.save()
-
-  callBack(data, res)
+  await user.save()
+    .then((result) => { result ? status200(result, res) : status404(res) })
+    .catch((err) => { status500(err, res) })
 }
 
 export const userList = async (req, res) => {
-  const data = await Model.find({})
-  callBack(data, res)
+  await Model.find({})
+    .then((result) => { result ? status200(result, res) : status404(res) })
+    .catch((err) => { status500(err, res) })
 }
 
 export const userDetails = async (req, res) => {
-  const data = await Model.findById(req.params.id)
-  callBack(data, res)
+  await Model.findById(req.params.id)
+    .then((result) => { result ? status200(result, res) : status404(res) })
+    .catch((err) => { status500(err, res) })
 }
 
 export const userFind = async (req, res) => {
-  const search = await Model.findOne({ login: req.params.login })
-  const data = {
-    name: search.name,
-    login: search.login,
-    feedback: search.feedback,
-    _id: search.id
-  }
-  callBack(data, res)
+  await Model.findOne({ login: req.params.login })
+    .then((result) => {
+      if (result) {
+        const data = {
+          name: result.name,
+          login: result.login,
+          feedback: result.feedback,
+          _id: result.id
+        }
+        status200(data, res)
+      } else status404(res)
+    })
+    .catch((err) => { status500(err, res) })
 }
 
 export const userUpdate = async (req, res) => {
   await Model.findByIdAndUpdate(req.params.id, req.query)
-  const data = await Model.findById(req.params.id)
-  callBack(data, res)
+    .then((result) => {
+      if (result) {
+        // const data = await Model.findById(req.params.id)
+        status200(result, res)
+      } else status404(res)
+    })
+    .catch((err) => { status500(err, res) })
 }
 
 export const userDelete = async (req, res) => {
-  const data = await Model.findByIdAndDelete(req.params.id)
-  callBack(data, res)
+  await Model.findByIdAndDelete(req.params.id)
+    .then((result) => { result ? status200(result, res) : status404(res) })
+    .catch((err) => { status500(err, res) })
 }

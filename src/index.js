@@ -14,5 +14,5 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const server = http.createServer(app)
 server.listen(setup.port, () => {
-  console.log(`${setup.banner} -port ${setup.port}`)
+  console.log(`${setup.banner} --port ${setup.port}`)
 })

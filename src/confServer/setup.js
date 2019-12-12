@@ -14,9 +14,13 @@ const setup = {
   mongodb: {
     uri: 'mongodb://repassa-api:J#eBYx5WUkYmG8Y@ds253348.mlab.com:53348/heroku_k66nk669',
     options: {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useNewUrlParser: true
+    },
+    database: 'heroku_k66nk669',
+    user: 'repassa-api',
+    collection: 'users'
   },
   status200: {
     code: 200,
