@@ -21,7 +21,7 @@
 		"build": "npm run clean && babel ./src -d ./build/ --source-maps",
 		"dev": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon -r dotenv/config --watch build",
 		"debugger": "npm run build && babel ./src -d ./build/ --source-maps --watch | nodemon -r dotenv/config --inspect --watch build",
-		"start": "npm run build && node -r dotenv/config build/index dotenv_config_path=src/setup/environments/secret/.env"
+		"start": "npm run build && node -r dotenv/config build/index"
 	},
 	"dependencies": {
 		"babel": "^6.23.0",
