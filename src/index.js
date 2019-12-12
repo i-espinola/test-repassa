@@ -11,6 +11,7 @@ const app = express()
 app.use(setup.prefixe, routes)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.options('/*', (req, res) => { res.status(setup.status200.code).set(setup.headers).end() })
 
 const server = http.createServer(app)
 server.listen(setup.port, () => {

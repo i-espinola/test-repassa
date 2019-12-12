@@ -2,7 +2,7 @@ import Model from '../models/employee.model'
 import setup from '../../confServer/setup'
 
 export const status200 = (data, res) => {
-  res.status(setup.status200.code).set(setup.headers).send(data || setup.status200.message).end()
+  res.status(setup.status200.code).set(setup.headers).send(data).end()
 }
 export const status400 = (res) => {
   res.status(setup.status400.code).set(setup.headers).send(setup.status400).end()
@@ -53,7 +53,6 @@ export const userUpdate = async (req, res) => {
   await Model.findByIdAndUpdate(req.params.id, req.query)
     .then((result) => {
       if (result) {
-        // const data = await Model.findById(req.params.id)
         status200(result, res)
       } else status404(res)
     })
