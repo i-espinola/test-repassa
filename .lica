@@ -1,0 +1,5 @@
+DB_HOST=ds253348.mlab.com:53348
+DB_BASE=heroku_k66nk669
+DB_USER=repassa-api
+DB_PASS=J#eBYx5WUkYmG8Y
+DB_COLLECTION=users
