@@ -41,7 +41,7 @@ export const userFind = async (req, res) => {
           name: result.name,
           login: result.login,
           feedback: result.feedback,
-          _id: result.id
+          id: result.id
         }
         status200(data, res)
       } else status404(res)
