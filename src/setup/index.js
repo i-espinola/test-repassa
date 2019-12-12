@@ -12,7 +12,8 @@ const setup = {
   banner: '\nExpress server on\n',
   favicon: 'build/favicon.ico',
   mongodb: {
-    uri: 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST + '/' + process.env.DB_BASE,
+    // uri: 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST + '/' + process.env.DB_BASE,
+    uri: 'mongodb://repassa-api:J#eBYx5WUkYmG8Y@ds253348.mlab.com:53348/heroku_k66nk669',
     options: {
       useUnifiedTopology: true,
       useFindAndModify: false,
