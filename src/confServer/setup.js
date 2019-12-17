@@ -7,11 +7,13 @@ const setup = {
     accept: 'application/json',
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
-    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+    'Access-Control-Allow-Headers':
+    'Origin, X-Requested-With, Content-Type, Accept'
   },
   banner: '\nExpress server on\n',
   favicon: 'build/favicon.ico',
   mongodb: {
+    // uri: 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@' + process.env.DB_HOST + '/' + process.env.DB_BASE,
     uri: 'mongodb://repassa-api:J#eBYx5WUkYmG8Y@ds253348.mlab.com:53348/heroku_k66nk669',
     options: {
       useUnifiedTopology: true,

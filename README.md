@@ -27,7 +27,7 @@ A aplicação sera recompilada sempre que você salvar um arquivo, você também
 ### Modo debugger
 
 Os arquivos do código fonte da aplicação estão contidos dentro do diretório `./src`.
-Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento para degubar a aplicação.
+Após concluir a instalação de todas as dependencias da aplicação, é possível executar o comando de desenvolvimento para debugar a aplicação.
 
     npm run debugger
 
@@ -36,8 +36,7 @@ A aplicação sera recompilada sempre que você salvar um arquivo, você também
 
 ### Construção (Transpilar)
 
-Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e compilados para a versão ES5 do JS.
-Para construir a aplicação em modo producão, execute o seguinte comando:
+Este comando cria os arquivos de produção dentro do diretório `./build`. Os arquivos de produção são transpilados e compilados para a versão ES5 do JS atraves do Babel. Para construir a aplicação em modo producão, execute o seguinte comando:
 
     npm run build
 
@@ -60,7 +59,7 @@ Esta API faz operações CRUD a partir de requisições recebidas via protocolo 
 Para criar um novo funcionário, basta enviar uma requisição com o método `POST` passando os parametros *name*, *login*, *feedback* e o prefixo `/create` logo após a URL base da API.
 Desta forma a requisição deve ser assim:
 
-    https://repassa-api.herokuapp.com/api/create?name=kiko&login=kikinho&feedback=Criança mimada, e não muito inteligente.
+    https://repassa-api.herokuapp.com/api/create?name=kiko&login=tesouro&feedback=Criança mimada, e não muito inteligente.
 
 Esta requisição returna o objeto criado.
 
@@ -98,7 +97,7 @@ Desta forma a requisição deve ser assim:
 
     https://repassa-api.herokuapp.com/api/list
 
-Esta requisição returna um objeto com todos os objetos dos usuários persistidos na base.
+Esta requisição returna um array com todos os objetos dos usuários persistidos na base.
 
 ## Principais tecnologias integradas
 
